@@ -15,7 +15,7 @@ public class SubActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sub);
     
-		// �f�[�^�̎��
+		// データの受け取り
 		Intent intent = getIntent();
         String arg = intent.getStringExtra("Name");
         Toast.makeText(this,arg, Toast.LENGTH_LONG).show();
@@ -25,7 +25,7 @@ public class SubActivity extends Activity {
 	}
 	private OnClickListener mButton1Listener = new OnClickListener() {
         public void onClick(View v) {
-        	
+        	//前の画面に戻る
         	finish();
         	
         }

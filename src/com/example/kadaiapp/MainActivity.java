@@ -10,7 +10,7 @@ import android.widget.Button;
 
 ////////////////////////////////////////////////
 //
-//‰æ–Ê‘JˆÚi•Ê‚ÌActivity‚ÖˆÚ‚éj
+//ç”»é¢é·ç§»(åˆ¥ã®Activityã¸ç§»ã‚‹)
 //
 ////////////////////////////////////////////////
 
@@ -26,11 +26,12 @@ public class MainActivity extends Activity {
 	private OnClickListener mButton1Listener = new OnClickListener() {
         public void onClick(View v) {
         	Intent intent = new Intent(MainActivity.this, SubActivity.class);
-        	// ƒf[ƒ^‚ğ‘—‚é
+        	
+       
         	Uri uri = Uri.parse("mailto:ino0341@gmail.com"); 
       		Intent intent1 = new Intent(Intent.ACTION_SENDTO,uri); 
-        	intent1.putExtra(Intent.EXTRA_SUBJECT,"ƒ^ƒCƒgƒ‹"); 
-        	intent1.putExtra(Intent.EXTRA_TEXT,"–{•¶"); 
+        	intent1.putExtra(Intent.EXTRA_SUBJECT,"ã‚¿ã‚¤ãƒˆãƒ«"); 
+        	intent1.putExtra(Intent.EXTRA_TEXT,"æœ¬æ–‡"); 
         	intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); 
         	startActivity(intent1); 
         	
