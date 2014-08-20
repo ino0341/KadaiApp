@@ -2,6 +2,7 @@ package com.example.kadaiapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,8 +27,15 @@ public class MainActivity extends Activity {
         public void onClick(View v) {
         	Intent intent = new Intent(MainActivity.this, SubActivity.class);
         	// データを送る
-        	intent.putExtra("Name", "TestData");
-        	startActivity(intent);
+        	Uri uri = Uri.parse("mailto:ino0341@gmail.com"); 
+      		Intent intent1 = new Intent(Intent.ACTION_SENDTO,uri); 
+        	intent1.putExtra(Intent.EXTRA_SUBJECT,"タイトル"); 
+        	intent1.putExtra(Intent.EXTRA_TEXT,"本文"); 
+        	intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); 
+        	startActivity(intent1); 
+        	
+        	
+        	
         	
         	
         }
